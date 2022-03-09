@@ -43,11 +43,11 @@ while (enemyHealth > 0 && playerHealth > 0) {
         else {
             window.alert(playerName + " still has " + playerHealth + " health left."); // shows your remaining health
         }
-    }
-}
+    } //end of while loop
+} // end of function
 
 for (var i = 0; i < enemyNames.length; i++) {
-    window.alert("Welcome to Robot Gladiators!");
+    window.alert("Welcome to Robot Gladiators! Round " + (i + 1));
     var pickedEnemyName = enemyNames[i];
     enemyHealth = 50;
     debugger;
