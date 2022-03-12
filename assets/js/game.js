@@ -1,10 +1,15 @@
+var randomNumber = function(min, max) {
+    var value = Math.floor(Math.random() * (max - min + 1) + min);  
+    return value;
+}
+
 var fightOrSkip = function() { //FIGHT OR SKIP FUNCTION
     var promptFight = window.prompt('Would you like to FIGHT or SKIP this battle? Enter "FIGHT" or "SKIP" to choose.');
-    promptFight = promptFight.toLowerCase();
     if (promptFight === "" || promptFight === null) {
         window.alert("You need to provide a valid answer! Please try again.");
         return fightOrSkip();
     }
+    promptFight = promptFight.toLowerCase();
     if (promptFight === "skip") {
         var confirmSkip = window.confirm("Are you sure you'd like to quit?");
         if (confirmSkip) {
@@ -13,6 +18,7 @@ var fightOrSkip = function() { //FIGHT OR SKIP FUNCTION
             return true;
         }
     }
+return false;    
 }
 
 var fight = function(enemy) { // FIGHT FUNCTION
@@ -125,11 +131,6 @@ var shop = function() { // SHOP FUNCTION
             shop();
         break;
     }
-}
-
-var randomNumber = function(min, max) {
-    var value = Math.floor(Math.random() * (max - min + 1) + min);  
-    return value;
 }
 
 var getPlayerName = function() {
